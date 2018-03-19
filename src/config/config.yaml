@@ -1,3 +1,94 @@
+
+## Using settings
+
+use.cve:
+  description: Use CVE database updater
+  default: true
+  type: bool
+
+use.cpe:
+  description: Use CPE database updater
+  default: false
+  type: bool
+
+use.cwe:
+  description: Use CWE database updater
+  default: false
+  type: bool
+
+use.capec:
+  description: Use CAPEC updater
+  default: false
+  type: bool
+
+use.via4:
+  description: Use VIA4 database updater
+  default: false
+  type: bool
+
+use.cpeother:
+  description: Use CPEOTHER database updater
+  default: false
+  type: bool
+
+use.vendor:
+  description: Use VENDOR database updater
+  defult: false
+  type: bool
+
+use.ms:
+  desscription: Use MS database updater
+  default: false
+  type: bool
+
+use.d2sec:
+  description: Use D2SEC database updater
+  default: false
+  type: bool
+
+use.exploitlib:
+  description: Use EXPLOITLIB database updater
+  default: false
+  type: bool
+
+use.ref:
+  description: Use REF database updater
+  default: false
+  type: bool
+
+use.npm:
+  description: Use NPM database updater
+  default: false
+  typeL bool
+
+## Debug settings
+
+debug:
+  description: Run in debug mode or not
+  default: false
+  type: bool
+  env: DEBUG_MODE
+
+# Time settings
+
+start_year:
+  description: Start year for CVE database
+  default: 2017
+  type: int
+  env: START_YEAR
+
+period_in_sec:
+  description: Period for services repetitions
+  default: 60
+  type: ints
+
+repetitions:
+  description: Repetitions for services
+  default: 1
+  type: int
+
+## MongodDB settings
+
 mongo.host:
   description: MongoDB host
   default: localhost
@@ -24,22 +115,101 @@ mongo.password:
 
 mongo.db:
   description: MongoDB database name
-  default: VulnerabilityManagement
+  default: &mongo_db VulnerabilityManagement
   type: str
   env: MONGO_DB
 
-
-start_year:
-  description: Start year for CVE database
-  default: 2017
-  type: int
-  env: START_YEAR
-
-http_proxy:
-  description: HTTP Proxy server
-  default: null
+mongo.collections.info:
+  description: Info collection in MongoDB
+  default: info
   type: str
-  env: HTTP_PROXY
+
+mongo.collections.new:
+  description: New elements in databases
+  default: new
+  type: str
+
+mongo.collections.modified:
+  description: Modfied elements in databases
+  default: modified
+  type: str
+
+mongo.collections.vulnerabilities:
+  description: Vulnerabilities in database
+  default: vulnerabilities
+  type: str
+
+mongo.collections.index:
+  description: INDEX table replications for Redis cache
+  default: index
+  type: str
+
+mongo.collections.cves:
+  description: CVES database
+  default: cves
+  type: str
+
+mongo.collections.cve:
+  description: CVE database
+  default: cve
+  type: str
+
+mongo.collections.cpeother:
+  description: CPEOTHER database
+  default: cpeother
+  type: str
+
+mongo.clooesctions.capec:
+  description: CAPEC database
+  default: capec
+  type: str
+
+mongo.collections.cpe:
+  description: CPE database
+  default: cpe
+  type: str
+
+mongo.collections.cwe:
+  description: CWE database
+  default: cwe
+  type: str
+
+mongo.collection.via4:
+  description: VIA4 database
+  default: via4
+  type: str
+
+mongo.collections.vendor:
+  description: VENDOR database
+  default: vendor
+  type: str
+
+mongo.collections.ms:
+  default: MS Bulletin database
+  default: ms
+  type: str
+
+mongo.collections.d2sec:
+  description: D2SEC database
+  default: d2sec
+  type: str
+
+mongo.collections.exploitlib:
+  description: EXPLOITDB database
+  default: exploitdb
+  type: str
+
+mongo.collections.npm:
+  description: NPM database
+  default: npm
+  type: str
+
+mongo.collections.user:
+  description: User definet vulnerabilities database
+  default: user
+  type: str
+
+## Redis cache settings
 
 cache.host:
   description: Redis cache host
@@ -53,6 +223,130 @@ cache.port:
   type: int
   env: CACHE_PORT
 
+cache.collections.incoming_queue:
+  description: Incoming Queue
+  default: incomingQueue
+  type: str
+
+cache.collections.new:
+  description: Collection for new elements
+  default: *mongo_db:new
+  type: str
+
+cache.collections.modified:
+  description: Collection for modified elements
+  default: *mongo_db:modified
+  type: str
+
+## Sources settings
+
+sources.cve:
+  description: Source of CVE files
+  default: https://static.nvd.nist.gov/feeds/xml/cve/
+  type: str
+
+sources.cpe:
+  description: Source of CPE files
+  default: https://static.nvd.nist.gov/feeds/xml/cpe/dictionary/official-cpe-dictionary_v2.2.xml.zip
+  type: str
+
+sources.cwe:
+  description: Source of CWE files
+  default: http://cwe.mitre.org/data/xml/cwec_v2.8.xml.zip
+  type: str
+
+sources.capec:
+  description: Source of CAPEC files
+  default: http://capec.mitre.org/data/xml/capec_v2.6.xml
+  type: str
+
+sources.via4:
+  description: Source of VIA4 files
+  default: http://www.cve-search.org/feeds/via4.json
+  type: str
+
+sources.vendor:
+  description: Source of VENDOR files
+  default: https://nvd.nist.gov/download/vendorstatements.xml.gz
+  type: str
+
+sources.ms:
+  description: Source of MS files
+  default: http://download.microsoft.com/download/6/7/3/673E4349-1CA5-40B9-8879-095C72D5B49D/BulletinSearch.xlsx
+  type: str
+
+sources.bulletin:
+  description: Source of bulletin files
+  default: https://technet.microsoft.com/library/security/
+  type: str
+
+sources.d2sec:
+  description: Source of D2SEC files
+  default: http://www.d2sec.com/exploits/elliot.xml
+  type: str
+
+sources.exploitdb:
+  description: Source of EXPLOITDB files
+  default: https://github.com/offensive-security/exploit-database/raw/master/files.csv
+  type: str
+
+sources.re:
+  description: Source of REF files
+  default: https://cve.mitre.org/data/refs/refmap/allrefmaps.zip
+  type: str
+
+sources.npm:
+  description: Source of NPM files
+  default: https://api.nodesecurity.io/advisories
+  type: str
+
+## File settings
+
+file_prefix:
+  description: File prefix for cve database files
+  default: nvdcve-2.0-
+  type: str
+
+file_suffix:
+  description: File suffix for cve database files
+  default: .xml.gz
+  type: str
+
+file_modified:
+  description: Postfix for modified files
+  default: modified
+  type: str
+
+file_recent:
+  description: Postfix for recent files
+  default: recent
+  type: str
+
+## Proxy and ssl settings 
+
+http_proxy:
+  description: HTTP Proxy server
+  default: null
+  type: str
+  env: HTTP_PROXY
+
+use_ssl:
+  description: Use SSL or not
+  default: false
+  type: bool
+
+ssl_certificate:
+  description: SSL Certificate file
+  default: cve-search.crt
+  type: str
+
+ssl_key:
+  description: SSL key file
+  default: cve-search.key
+  type: str
+
+## Application settings
+
 app_version:
   description: Application version
   default: 1.0
@@ -64,6 +358,20 @@ app_branch:
   default: development
   type: str
   env: APP_BRANCH
+
+## Directories settings
+
+index_dir:
+  description: Indexing directory
+  default: ./indexdir
+  type: str
+
+temp_dir:
+  description: Temporary directory
+  default: ./tmp
+  type: str
+
+## Logging settings
 
 log.level:
   description: Log level
