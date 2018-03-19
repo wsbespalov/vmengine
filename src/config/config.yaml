@@ -1,0 +1,79 @@
+mongo.host:
+  description: MongoDB host
+  default: localhost
+  type: str
+  env: MONGO_HOST
+
+mongo.port:
+  description: MongoDB port
+  default: 27017
+  type: int
+  env: MONGO_PORT
+
+mongo.username:
+  description: User name for MongoDB
+  default: null
+  type: str
+  env: MONGO_USERNAME
+
+mongo.password:
+  description: Password for MongoDB
+  default: null
+  type: str
+  env: MONGO_PASSWORD
+
+mongo.db:
+  description: MongoDB database name
+  default: VulnerabilityManagement
+  type: str
+  env: MONGO_DB
+
+
+start_year:
+  description: Start year for CVE database
+  default: 2017
+  type: int
+  env: START_YEAR
+
+http_proxy:
+  description: HTTP Proxy server
+  default: null
+  type: str
+  env: HTTP_PROXY
+
+cache.host:
+  description: Redis cache host
+  default: localhost
+  type: str
+  env: CACHE_HOST
+
+cache.port:
+  description: Redis cache port
+  default: 6379
+  type: int
+  env: CACHE_PORT
+
+app_version:
+  description: Application version
+  default: 1.0
+  type: str
+  env: APP_VERSION
+
+app_branch:
+  description: Application branch
+  default: development
+  type: str
+  env: APP_BRANCH
+
+log.level:
+  description: Log level
+  default: INFO
+  type: str
+  env: LOG_LEVEL
+
+log.format:
+  description: Log format
+  default: "%(asctime)s:%(levelname)s:%(message)s"
+  type: str
+  env: LOG_FORMAT
+
