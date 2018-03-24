@@ -1,3 +1,9 @@
+## Subscribe settings
+
+channel.main:
+  description: Main message transaction channel
+  default: vm-main
+  type: str
 
 ## Using settings
 
@@ -59,7 +65,7 @@ use.ref:
 use.npm:
   description: Use NPM database updater
   default: false
-  typeL bool
+  type: bool
 
 ## Debug settings
 
@@ -115,7 +121,7 @@ mongo.password:
 
 mongo.db:
   description: MongoDB database name
-  default: &mongo_db VulnerabilityManagement
+  default: VulnerabilityManagement
   type: str
   env: MONGO_DB
 
@@ -230,12 +236,12 @@ cache.collections.incoming_queue:
 
 cache.collections.new:
   description: Collection for new elements
-  default: *mongo_db:new
+  default: VulnerabilityManagement:new
   type: str
 
 cache.collections.modified:
   description: Collection for modified elements
-  default: *mongo_db:modified
+  default: VulnerabilityManagement:modified
   type: str
 
 ## Sources settings
