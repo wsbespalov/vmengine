@@ -2,7 +2,7 @@ import pymongo
 from pymongo import errors
 from datetime import datetime
 
-from base_classes.database import Database
+from old_code_1.base_classes.database import Database
 
 
 class Mongo(Database):
