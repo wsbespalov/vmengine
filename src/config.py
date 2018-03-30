@@ -23,8 +23,10 @@ configuration = {
     },
     "mycollection": "cves",
     "files": {
-        "prefix": "nvdcve-2.0-",
-        "suffix": ".xml.gz",
+        #"prefix": "nvdcve-2.0-",
+        "prefix": "nvdcve-1.0-",
+        #"suffix": ".xml.gz",
+        "suffix": ".json.gz",
         "modified": "modified",
         "recent": "recent"
     },
@@ -36,7 +38,9 @@ configuration = {
     "index_dir": "./indexdir",
     "temp_dir": "./tmp",
     "sources": {
-        "cve": "https://static.nvd.nist.gov/feeds/xml/cve/",
+        #"cve": "https://static.nvd.nist.gov/feeds/xml/cve/",
+        #"cve": "https://nvd.nist.gov/feeds/json/cve/1.0/nvdcve-1.0-modified.json.zip",
+        "cve": "https://nvd.nist.gov/feeds/json/cve/1.0/",
     },
     "messages": {
         'normal': 0,

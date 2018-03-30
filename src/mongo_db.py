@@ -23,6 +23,13 @@ class Mongo(Database):
         self.collection_new = self.mongo[self.mongo_collection_config.get("new", "new")]
 
     def set_last_modified(self, **kwargs):
+        """
+        Set parameter "last-modified" in INFO collection
+        :param kwargs:
+            collection:     collection name
+            date:           date to set
+        :return:
+        """
         collection = kwargs.get("collection", "cves")
         date = kwargs.get("date", datetime.utcnow())
         try:
@@ -33,8 +40,17 @@ class Mongo(Database):
             )
         except errors.PyMongoError as err:
             print("Get an exception in ~set_last_modified~: {}".format(err))
+        return None
 
     def set_collection_info(self, **kwargs):
+        """
+        Set field in INFO collection
+        :param kwargs:
+            collection:     collection name
+            field:          field to set
+            data:           data to set in field
+        :return:
+        """
         collection = kwargs.get("collection", "cves")
         field = kwargs.get("field", "default")
         data = kwargs.get("data", None)
@@ -46,8 +62,16 @@ class Mongo(Database):
             )
         except errors.PyMongoError as err:
             print("Get an exception in ~set_last_modified~: {}".format(err))
+        return None
 
     def update_one(self, **kwargs):
+        """
+        Update one item in MongoDB
+        :param kwargs:
+            collection:     MongoDB collection
+            data:           data in JSON to update in collection
+        :return:
+        """
         collection = kwargs.get("collection", None)
         if collection is not None:
             data = kwargs.get("data", {})
@@ -59,8 +83,16 @@ class Mongo(Database):
                     )
                 except errors.PyMongoError as err:
                     print("Get an exception in ~set_last_modified~: {}".format(err))
+        return None
 
     def update_many(self, **kwargs):
+        """
+        Update list of data in MongoDB
+        :param kwargs:
+            collection:     MongoDB collection
+            data:           list of JSON data to update
+        :return:
+        """
         collection = kwargs.get("collection", None)
         if collection is not None:
             data = kwargs.get("data", {})
@@ -72,8 +104,16 @@ class Mongo(Database):
                     )
                 except errors.PyMongoError as err:
                     print("Get an exception in ~set_last_modified~: {}".format(err))
+        return None
 
     def insert_one(self, **kwargs):
+        """
+        Insert new item into MongoDB
+        :param kwargs:
+            collection:     MongoDB collection
+            data:           item to insert into MongoDB
+        :return:
+        """
         collection = kwargs.get("collection", None)
         if collection is not None:
             data = kwargs.get("data", {})
@@ -81,8 +121,16 @@ class Mongo(Database):
                 collection.insert(data)
             except errors.PyMongoError as err:
                 print("Get an exception in ~set_last_modified~: {}".format(err))
+        return None
 
     def insert_many(self, **kwargs):
+        """
+        Insert list of data int MongoDB
+        :param kwargs:
+            collection:     MongoDB collection
+            data:           list of items to insert into MongoDB
+        :return:
+        """
         collection = kwargs.get("collection", None)
         if collection is not None:
             data = kwargs.get("data", {})
@@ -94,8 +142,16 @@ class Mongo(Database):
                     )
                 except errors.PyMongoError as err:
                     print("Get an exception in ~set_last_modified~: {}".format(err))
+        return None
 
     def get_one_by_id(self, **kwargs):
+        """
+        Get one item from collection in MongoDB by ID field
+        :param kwargs:
+            collection:     MongoDB collection
+        :return:
+            item or None
+        """
         collection = kwargs.get("collection", None)
         if collection is not None:
             id = kwargs.get("id", None)
@@ -110,9 +166,21 @@ class Mongo(Database):
         return None
 
     def get_one_by_name(self, **kwargs):
-        pass
+        """
+        No implemented now
+        :param kwargs:
+        :return:
+        """
+        return None
 
     def get_last_modified(self, **kwargs):
+        """
+        Get last-modified field from MongoDB collection
+        :param kwargs:
+            collection:     MongoDB collection
+        :return:
+            last-modified value or None
+        """
         collection = kwargs.get("collection", None)
         if collection is not None:
             info = self.get_info(collection=collection)
@@ -120,6 +188,13 @@ class Mongo(Database):
         return None
 
     def get_info(self, **kwargs):
+        """
+        Get information from INFO collection
+        :param kwargs:
+            collection:     collection NAME
+        :return:
+            information or None
+        """
         collection = kwargs.get("collection", None)
         if collection is not None:
             try:
@@ -132,6 +207,14 @@ class Mongo(Database):
         return None
 
     def check_one(self, **kwargs):
+        """
+        Check if item in MongoDB collection
+        :param kwargs:
+            collection:     MongoDB collection
+            id:             item ID
+        :return:
+            (True, last-modified) or None
+        """
         collection = kwargs.get("collection", None)
         if collection is not None:
             id = kwargs.get("id", None)
@@ -147,14 +230,29 @@ class Mongo(Database):
         return False, None
 
     def get_size(self, **kwargs):
+        """
+        Get MongoDB collection count
+        :param kwargs:
+            collection:     MongoDB collection
+        :return:
+            size or None
+        """
         collection = kwargs.get("collection", None)
         if collection is not None:
             try:
                 self.mongo[collection].count()
             except errors.PyMongoError as err:
                 print("Get an exception in ~set_last_modified~: {}".format(err))
+        return None
 
     def ensure_index(self, **kwargs):
+        """
+        Ensure index for MongoDB collection by field
+        :param kwargs:
+            collection:     MongoDB collection NAME
+            field:          field NAME to ensure index
+        :return:
+        """
         collection = kwargs.get("collection", None)
         if collection is not None:
             field = kwargs.get("field", "id")
@@ -162,28 +260,66 @@ class Mongo(Database):
                 self.mongo[collection].ensure_index(field)
             except errors.PyMongoError as err:
                 print("Get an exception in ~set_last_modified~: {}".format(err))
+        return None
 
     def drop_table(self, **kwargs):
+        """
+        Drop collection in MongoDB
+        :param kwargs:
+            collection:     MongoDB collection to drop
+        :return:
+        """
         collection = kwargs.get("collection", None)
         if collection is not None:
             try:
                 result = collection.drop()
             except errors.PyMongoError as err:
                 print("Get an exception in ~set_last_modified~: {}".format(err))
+        return None
 
     def drop_new(self, **kwargs):
+        """
+        Drop NEW collection in MongoDB
+        :param kwargs:
+        :return:
+        """
         try:
             self.collection_new.drop()
         except errors.PyMongoError as err:
             print("Get an exception in ~set_last_modified~: {}".format(err))
+        return None
 
     def drop_modified(self, **kwargs):
+        """
+        Drop MODIFIED collection
+        :param kwargs:
+        :return:
+        """
         try:
             self.collection_modified.drop()
         except errors.PyMongoError as err:
             print("Get an exception in ~set_last_modified~: {}".format(err))
+        return None
+
+    def drop_info_table(self, **kwargs):
+        """
+        Drop INFO collection in MongoDB
+        :param kwargs:
+        :return:
+        """
+        try:
+            self.collection_info.drop()
+        except errors.PyMongoError as err:
+            print("Get an exception in ~set_last_modified~: {}".format(err))
+        return None
 
     def sanitize(self, item):
+        """
+        Sanitize item in MongoDB
+        :param item:
+            item:       item to sanitize
+        :return:
+        """
         if isinstance(item, pymongo.cursor.Cursor):
             item = list(item)
         if isinstance(item, list):

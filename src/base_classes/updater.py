@@ -35,10 +35,10 @@ class Updater(ABC):
         raise NotImplementedError("Should be implemented")
 
     @abstractmethod
-    def parse(self, file):
+    def parse(self, **kwargs):
         raise NotImplementedError("Should be implemented")
 
-    def __get_raw_file(self, getfile, http_proxy=None):
+    def get_raw_file(self, getfile, http_proxy=None):
         try:
             if http_proxy:
                 proxy = req.ProxyHandler({'http': http_proxy, 'https': http_proxy})
@@ -53,7 +53,7 @@ class Updater(ABC):
         except Exception as ex:
             return None, str(ex)
 
-    def __get_gzip_file(self, getfile, http_proxy=None):
+    def get_gzip_file(self, getfile, http_proxy=None):
         try:
             if http_proxy:
                 proxy = req.ProxyHandler({'http': http_proxy, 'https': http_proxy})
@@ -74,7 +74,7 @@ class Updater(ABC):
         except Exception as ex:
             return None, str(ex)
 
-    def __get_bzip_file(self, getfile, http_proxy=None):
+    def get_bzip_file(self, getfile, http_proxy=None):
         try:
             if http_proxy:
                 proxy = req.ProxyHandler({'http': http_proxy, 'https': http_proxy})
@@ -94,7 +94,7 @@ class Updater(ABC):
         except Exception as ex:
             return None, str(ex)
 
-    def __get_zip_file(self, getfile, http_proxy=None):
+    def get_zip_file(self, getfile, http_proxy=None):
         try:
             if http_proxy:
                 proxy = req.ProxyHandler({'http': http_proxy, 'https': http_proxy})

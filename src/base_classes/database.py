@@ -84,3 +84,7 @@ class Database(ABC):
     @abstractmethod
     def drop_modified(self, **kwargs):
         raise NotImplementedError("Should be implemented")
+
+    @abstractmethod
+    def drop_info_table(self, **kwargs):
+        raise NotADirectoryError("Should be implemented")
