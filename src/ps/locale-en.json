@@ -1,0 +1,1241 @@
+{
+	"TEST": "Hello, World!!!",
+	"COMMON": {
+		"TITLE": "Vulnerability Management",
+		"EMAIL" : "Email",
+		"UPGRADE_SUCCESS" : "Now you have Pro-account",
+		"CLIENT_ERROR" : {
+			"REQUIRED": "Field is required",
+			"INVALID_EMAIL": "Please type a valid email address",
+			"ORG_DOMAIN_MIN" : "Field should have at least 4 characters",
+			"ORG_DOMAIN_MAX" : "Field should have no more than 20 characters",
+			"ORG_DOMAIN_PAT" : "Field coluld contain only lowercase characters, digits, dashes, and must start with a character",
+			"PROJ_NAME_MIN" : "Field should contain not less than 3 characters",
+			"PROJ_NAME_MAX" : "Field should contain not more than 40 characters",
+			"PROJ_NAME_PAT" : "Field could contain only underscore and dashes"
+		},
+		"SERVER_ERROR" : {
+			"ERR_CONNECTION_REFUSED": "Server currently offline",
+			"FILL_ALL": "Please fill all fields",
+			"INVALID_COMPONENTS": "Invalid Components",
+			"INCORRECT_REPORT": "Upload correct {{reportType}} report",
+			"ACCESS_DENIED": "Access is denied. {{reason}}",
+			"INVALID_TOKEN": "Invalid Token",
+			"LOGIN_FAILED": "Login Failed",
+			"ACCOUNT_BLOCKED": "Your account has been blocked till {{time | date:'medium'}} because too many login attempts",
+			"PASS_EXPIRED": "Password has expired. Please set new one using Forgot password link",
+			"UNAUTHORIZED": "Unauthorized",
+			"COMPARE_PASS": "Can't compare your password",
+			"WRONG_CURRENT_PASS" : "Please enter a correct current password",
+			"NEW_PASS_NOT_SAME_AS_LAST": "New Password can not be the same as the 4 previously used passwords",
+			"JWT_EXPIRED": "Token has already expired. Try to get new one",
+			"JWT_GEN_ERR" : "Token generating error",
+			"JWT_VERIFY_ERR" : "Unauthorized",
+			"EMAIL_NOT_EXISTS" : "This email does not exist",
+			"ORG_EXISTS": "Such organization name is already exists",
+			"ORG_NOT_FOUND": "Organization not found",
+			"ORG_DOMAIN_EXISTS" : "Such organization domain is already exists",
+			"COUPON_INV": "Your coupon is not valid",
+			"INVITATION_ERR": "You should have a correct invitation code for signing up",
+			"USER_EXISTS": "This user is already exists",
+			"CARD_DECLINED": "Your card was declined. Try another card",
+			"WRONG_MFA": "MFA Code is wrong. Please try again",
+			"UPLOAD_S3_ERR" : "Unable to upload",
+			"UPLOAD_TO_LARGE_FILE": "File too large",
+			"TRIAL_PLATFORMS_RESTRICTION" : "Trial user can create only 1 platform",
+			"TRIAL_USERS_RESTRICTION" : "Your organization is trial. You can't add users",
+			"MAIL_SENDING": "Your action has been completed, but we have a problem with sending email now",
+			"EMPTY_EMAIL_AND_ROLE" : "Email and role should not be empty",
+			"SET_EXIST": "Current name / version already exists",
+			"INVINTATION_EXIST" : "Such invitation code already exist",
+			"COUPON_FIELDS" : "Please fill all fields to create a coupon",
+			"WRONG_GITHUB_CREDENTIALS" : "Wrong credentials",
+			"GITHUB_TOKEN_EXIST": "Token already exist",
+			"GITHUB_ERROR": "Bad request. Seems something goes wrong",
+			"GITHUB_NO_COMPONENTS": "No Components, Please select another branch or repository"
+		},
+		"STRIPE_ERROR": {
+			"CREATE_CUSTOMER" : "Stripe Customer create error. ({{reason}})",
+			"DELETE_CUSTOMER" : "Stripe Customer remove error. ({{reason}})",
+			"CHECK_COUPON" : "Checking coupon error. ({{reason}})",
+			"SUBSCRIBE_USER_PLAN" : "Subscribing to user plan error. ({{reason}})",
+			"UPDATE_USER_PLAN" : "Updating of user plan error. ({{reason}})",
+			"UPDATE_USER_PLAN_AFTER_CHARGE" : "Updating of user plan after charge error. ({{reason}})",
+			"CREATE_INVOICE" : "Creating invoice error. ({{reason}})",
+			"PAY_INVOICE" : "Paying invoice error. ({{reason}})",
+			"GET_ORG_STATUS" : "Get organization status error. ({{reason}})",
+			"GET_ALL_USER_CARDS" : "Get all user's cards error. ({{reason}})",
+			"REMOVE_CARD" : "Removing card error. ({{reason}})",
+			"ADD_CARD" : "Adding card error. ({{reason}})",
+			"GET_PAYMENTS" : "Getting payments error. ({{reason}})",
+			"GET_INVOICES" : "Getting invoices error. ({{reason}})",
+			"CREATE_USER_CHARGE" : "Creating user charge error. ({{reason}})",
+			"GET_ACTIVE_COUPONS" : "Getting active coupons error. ({{reason}})",
+			"DELETE_COUPON" : "Getting active coupons error. ({{reason}})",
+			"CREATE_COUPON" : "Getting active coupons error. ({{reason}})",
+			"DOWNLOAD_RECEIPT" : "Getting active coupons error. ({{reason}})"
+		}
+	},
+	"LOGIN" : {
+		"TITLE" : "Sign in to your team",
+		"EXISTS" : "You were signed in before to these teams:",
+		"NEW" : "Add New Team",
+		"ORG_URL": "Domain",
+		"PASSWORD" : "Password",
+		"FORGOT" : "Forgot Password",
+		"FIND": "Find your team",
+		"CONTINUE" : "Continue",
+		"LOGIN_BTN": "LOGIN",
+		"BACK": "Back",
+		"TYPE": "Type your code to continue",
+		"REQUIRED": "Field is required",
+		"CODE": "Invitation Code",
+		"REMEMBER": "Remember: you can use Invitation code only one time.",
+		"SIGNUP_LINK": "Don't have an account? Sign up.",
+		"TOASTS": {
+			"FORGOT_SUCCESS": "Email sent"
+		},
+		"MFA" : {
+			"TITLE": "Multi-factor Authentication",
+			"DESC": "Type your code to continue",
+			"LABEL": "MFA code",
+			"CONTINUE": "Continue"
+		}
+	},
+	"FORGOT": {
+		"TITLE": "Forgot Password?",
+		"INSTRUCTION": "Type your Email and follow the instructions",
+		"FORGOT_BTN": "Send Email"
+	},
+	"FIND" : {
+		"TITLE": "Forgot your team url?",
+		"INSTRUCTION": "Type your Email and follow the instructions",
+		"FORGOT_BTN": "Send Email"
+	},
+	"SIGNUP": {
+		"TITLE": "SurePatch - Sign up",
+		"STEP_1" : {
+			"TITLE": "Step 1: Customize organization",
+			"LEGEND" : "Organization setup",
+			"ORG_NAME": "Organization name",
+			"ORG_DOMAIN": "Domain",
+			"ORG_DOMAIN_DESC": "* Use 'Domain' for signing in"
+		},
+		"STEP_2": {
+			"TITLE": "Step 2: personal data",
+			"LEGEND": "Personal data",
+			"EMAIL": "Email",
+			"FIRST_NAME": "First name",
+			"LAST_NAME": "Last name"
+		},
+		"STEP_3": {
+			"TITLE": "Step 3: Choose a plan",
+			"LEGEND": "Choose a plan",
+			"LIM_OPT": "Limited Single Platform",
+			"LIM_OPT_DESC": "Single platform for a single user with 15 components. It's free. You can upgrade at any time",
+			"UNLIM_OPT": "Unlimited Platforms",
+			"UNLIM_OPT_DESC": "Unlimited platforms and components. Manual and automatic vulnerability search. $150 per month",
+			"COUP": "I have a coupon",
+			"COUP_LAB": "Coupon Id"
+
+		},
+		"STEP_4": {
+			"TITLE": "Multifactor Authentication",
+			"LEGEND": "Registration successful",
+			"DESC_1": "Multifactor Authentication, or two-factor authentication on SurePatch is implemented with Google Authenticator.",
+			"DESC_2": "It generates timed codes used during the 2-step verification process.",
+			"SKIP": "Skip this step if You don't want to enable Multifactor Authentication",
+			"MFA_ON": "Turn on multifactor authentication",
+			"MFA_SKIP": "Skip",
+			"HELP": "QR code has been generated automatically. Scan code via Google Authenticator application"
+		},
+		"TOASTS": {
+			"SIGNUP_SUCCESS": "{{username}} successfully registered. Check your email",
+			"CHOOSE_PLAN_ERR": "Choose a plan before submitting",
+			"INV_SUCCESS": "Invitation code accepted",
+			"MFA_SUCCESS" : "MFA enabled successfully"
+		},
+		"FINAL": {
+			"REPORT": "Payment report",
+			"PAYMENT": "Your payment was succeed.",
+			"REGISTRATION": "Registration was successful.",
+			"DECLINED": "Your payment was declined.",
+			"CHECK": "Check your card details and contact with your bank.",
+			"SIGNIN": "Now you able to sign in your organization. Check your email",
+			"SET": "set password and charge your SurePatch organization one more time",
+			"SETPASSWORD": "and set password",
+			"OR": "or"
+		},
+		"ALREDY": "Already have an account?",
+		"CONTINUE": "Continue",
+		"CHOOSE_PLAN": "Continue",
+		"DONE": "CONTINUE",
+		"INVITATION" : {
+			"TITLE": "Invitation Code",
+			"DESC": "Type your code to continue",
+			"INV_CODE": "Invitation code",
+			"HELP": "Remember: you can use Invitation code only one time.",
+			"CONTINUE": "Continue"
+		},
+		"MFA" : {
+			"TITLE": "Multi-factor Authentication",
+			"DESC": "QR code has been generated automatically. To use Multi-factor Authentication use Google Authenticator application, scan code and enable 'MFA' option in your profile settings",
+			"MFA_CODE": "MFA Code",
+			"CONTINUE": "Continue",
+			"ENABLE": "Enable"
+		}
+	},
+	"SIDENAV" : {
+		"PLATFORMS" : {
+			"TITLE" : "Platforms",
+			"FIRST" : "Create your first platform",
+			"CREATE" : "Create new platform",
+			"BLOCKED" : "This platform is blocked",
+			"BUTTON" : "create"
+		},
+		"PROJECTS" : {
+			"TITLE" : "Projects",
+			"CREATE" : "Create new project"
+		},
+		"COMPONENTS" : {
+			"TITLE" : "Components"
+		},
+		"ISSUES" : {
+			"TITLE" : "Issues"
+		},
+		"CHECK" : "Check",
+		"UPGRADE" : "Upgrade to PRO",
+		"DASHBOARD" : "Dashboard",
+		"SUPER" : "Super Users",
+		"BLOCKED" : "Blocked Users / MFA",
+		"INVITATIONS" : "Coupons / Invitations",
+		"DICTIONARY" : "Dictionary",
+		"FORUM": "Forum",
+		"CREATE": "Create",
+		"INTEGRATE": "Integrations",
+		"TEAM": "Team",
+		"MANAGE": "Manage organization",
+		"BILLING": "Billing",
+		"ARCHIVE": "Archive",
+		"LOGS": "Logs"
+	},
+	"START" : {
+		"WELCOME" : "Welcome to SurePatch",
+		"CHECK" : "Check access",
+		"OWNER" : "owner",
+		"ISSUES" : "Issues",
+		"SLACK" : {
+			"INTEGRATION" : {
+				"PART1" : "You can integrate your organization with",
+				"PART2" : "to have all your team be on the same page and keep your work synchronized"
+			},
+			"INTEGRATE" : "Integrate with Slack"
+		},
+		"PLATFORMS" : {
+			"OVERVIEW" : "Platforms overview",
+			"TITLE" : "Platform",
+			"FIRST" : "Create your first platform",
+			"TRIAL" : "Create trial platform",
+			"VIEW" : "view",
+			"EMPTY" : "No platforms in that organization",
+			"BLOCKED" : "This platform is blocked",
+			"TABLE" : {
+				"PLATFORM" : "Platform",
+				"PROJECTS" : "Projects",
+				"COMPONENTS" : "Components"
+			}
+		},
+		"PROJECTS" : {
+			"OVERVIEW": "Projects overview",
+			"TITLE" : "Project",
+			"CREATE" : "Create new project",
+			"EMPTY" : "There are no projects yet",
+			"TRIAL" : "Trial project",
+			"ADMIN" : "You have write permission to that project",
+			"USER" : "You have read permission to that project",
+			"COUNT" : {
+				"SINGLE" : "Project",
+				"MULTIPLE" : "Projects"
+			},
+			"TABLE" : {
+				"PLATFORM" : "Platform",
+				"PROJECTS" : "Project",
+				"COMPONENTS" : "Components",
+				"ISSUES" : "Issues",
+				"SCORE" : "Vulnerability Score"
+			}
+		},
+		"ORGANIZATION" : {
+			"TITLE" : "Organization",
+			"BLOCKED" : "This company is blocked",
+			"OWNER" : "You are an owner"
+		},
+		"SECURITY" : {
+			"TITLE" : "Security",
+			"SCORE" : "Vulnerability Score",
+			"CRITICAL" : "Critical Issues",
+			"OPEN" : "Open Issues"
+		},
+		"COMPONENTS" : {
+			"TITLE" : "Vulnerable Components",
+			"TABLE" : {
+				"COMPONENT" : "Component",
+				"ISSUES" : "Open Issues",
+				"OCCURRENCES" : "Occurrences"
+			}
+		}
+	},
+	"NAVBAR" : {
+		"UPLOAD" : "upload new",
+		"PLATFORMS" : "platforms",
+		"PROJECTS" : "projects",
+		"SETUP" : "Manage Organization",
+		"LOGS" : "Logs",
+		"PROFILE" : "Profile",
+		"TEAM" : "Team",
+		"ADD" : "Add account",
+		"SIGNOUT" : "Sign out",
+		"INTEGRATIONS": "Integrations"
+	},
+	"ORGANIZATION" : {
+		"VIEW" : {
+			"LOADING" : "Loading",
+			"BILLING" : {
+				"TITLE" : "Billing",
+				"OVERVIEW" : "Billing overview",
+				"BLOCKED" : "This organization is blocked.",
+				"UNLOCK" : "To unlock, click ''pay'' button and follow instructions",
+				"PAY" : "Pay",
+				"DOWNLOAD" : "DOWNLOAD",
+				"TEAMMATES" : "teammates",
+				"DELETE": "Delete",
+				"PLAN" : {
+					"TITLE" : "Plan",
+					"PRO" : {
+						"TITLE" : "PRO",
+						"DESCRIPTION" : "Unlimited projects and platforms"
+					},
+					"TRIAL" : {
+						"TITLE" : "Trial",
+						"DESCRIPTION" : "One project, one platform, up to 15 components"
+					}
+				},
+				"PAYMENT" : {
+					"TITLE" : "Payment",
+					"NEXT" : "Next payment due",
+					"AMOUNT" : "Amount",
+					"HISTORY" : "Payment history",
+					"DATE" : "Date",
+					"PLAN_NAME" : "Plan name",
+					"METHOD" : "Payment method",
+					"RECEIPT" : "Receipt",
+					"USER" : "User added",
+					"MONTHLY" : "Monthly payment",
+					"REAL_DATE" : "{{time | date: 'yyyy-MM-dd'}}"
+				},
+				"CARD" : {
+					"EMPTY" : "Card is not added",
+					"NOT_ADDED" : "No cards yet. Add now.",
+					"NUMBER" : "Card number",
+					"NAME" : "Card name",
+					"EXPIRY" : "Card Expiry",
+					"CVC" : "Card CVC",
+					"EXPIRATION" : "Expiration",
+					"DELETE" : "Delete",
+					"SAVE" : "Save card"
+				},
+				"COUPON" : {
+					"TITLE" : "Coupon",
+					"EMPTY" : "You don’t have an active coupon.",
+					"DURATION" : "Duration: {{month}} month, end: {{end | date:'medium'}}, percent off: {{percent_off}}%."
+				},
+				"STRIPE" : {
+					"ACCOUNT" : "Stripe account",
+					"BALANCE" : "Current account balance",
+					"NOTE" : "When you deleting user from your organization, we refund your money on your Stripe account. Payment of the next month subscription will be made based on the current Stripe-account balance."
+				}
+			},
+			"DICTIONARY" : {
+				"TITLE" : "Dictionary",
+				"OVERVIEW" : "Organization's dictionary",
+				"SEARCH" : "Search",
+				"EMPTY" : "There are no Dictionary yet",
+				"COMPONENT" : "Name of component",
+				"ALTERNATIVE" : "Alternative names",
+				"EDIT" : {
+					"TITLE" : "Edit",
+					"OVERVIEW" : "Edit dictionary",
+					"COMPONENT" : "Name of component",
+					"ALTERNATIVE" : "Alternative name",
+					"SAVE" : "Save"
+				},
+				"UNTRACKED": {
+					"TITLE": "Edit untracked",
+					"COMPONENT": "Untracked component",
+					"NO_STATE": "No states were found.",
+					"VERSION": "Version",
+					"SAVE": "Save"
+				},
+				"UNUSED": {
+					"TITLE": "Edit unused",
+					"ADD": "Add vulnerability for unused component ",
+					"VULNERABILITY": {
+						"TITLE": "Vulnerability title (required)",
+						"FIELD": "Field is required",
+						"DESCRIPTION": "Vulnerability description (required)",
+						"CONFIGURATION": "Vulnerable Configuration"
+					},
+					"RANK": "Rank (required)",
+					"ACCESS": {
+						"TITLE": "Access",
+						"VECTOR": "Vector",
+						"COMPLEXITY": "Complexity",
+						"AUTH": "Authentication"
+					},
+					"IMPACT": {
+						"TILTE": "Impact",
+						"CONF": "Confidentiality",
+						"INTEG": "Integrity",
+						"AVAIL": "Availability"
+					},
+					"SAVE": "Save"
+				}
+			},
+			"ARCHIVE" : {
+				"TITLE" : "Archive",
+				"OVERVIEW" : "Organization's archive",
+				"EMPTY" : "Archive is empty",
+				"SETTING": "Settings overview",
+				"ALL": "ALL",
+				"PROJECTS": "Projects",
+				"PLATFORMS": "Platforms",
+				"MOVED": "Moved to archive by",
+				"AT": "at",
+				"ISSUES": "Issues",
+				"SCORE": "Score",
+				"DELETE" : "Delete",
+				"RECOVER" : "Recover",
+				"TOASTS" : {
+					"PLATFORM" : {
+						"DELETE" : "Platform has been successfully removed",
+						"RECOVER" : "Platform has been successfully recovered"
+					},
+					"PROJECT" : {
+						"DELETE" : "Project has been successfully removed",
+						"RECOVER" : "Project has been successfully recovered"
+					}
+				}
+			},
+			"TEAM" : {
+				"TITLE" : "Team",
+				"ADD" : "Add new user",
+				"NOTE" : {
+					"PART1" : "You currently have",
+					"PART2" : "{{ more === 1 ? 'user license' : 'users licenses' }}, additional licenses are $15 per user"
+				},
+				"EMAIL" : "User email",
+				"FIRST_NAME" : "First Name",
+				"LAST_NAME" : "Last name",
+				"TEAMMATES" : "Teammates",
+				"EMPTY" : "You have no team yet",
+				"USER" : "User",
+				"USER_ROLE" : "Role",
+				"ROLE" : {
+					"TITLE" : "Select role",
+					"ADMIN" : "Admin",
+					"PLATFORM" : "Platform manager",
+					"PLATFORM_ALTERNATIVE" : "Create platforms",
+					"PROJECT" : "Project manager",
+					"PROJECT_ALTERNATIVE" : "Create projects",
+					"READ" : "Read"
+				},
+				"REMOVE" : {
+					"TITLE" : "Would you like to delete {{userName}} from {{organizationName}} organization?",
+					"NOTE" : "When you deleting user from your organization, we refund your money on your Stripe account. Payment of the next month subscription will be made based on the current Stripe-account balance.",
+					"OK" : "Delete",
+					"CANCEL" : "Cancel"
+				},
+				"BUTTONS" : {
+					"ADD" : "Add user",
+					"SAVE" : "Save changes",
+					"REMOVE" : "Remove"
+				}
+			},
+			"INTEGRATIONS" : {
+				"TITLE" : "Integrations",
+				"SLACK" : {
+					"INTEGRATE" : "Integrate with Slack",
+					"NOTE" : "Check, that all users in your team correctly related to their Slack accounts",
+					"TIE" : {
+						"TITLE" : "Tie to Slack",
+						"OVERVIEW" : "Tie SurePatch account to your Slack account",
+						"SAVE" : "Save"
+					},
+					"INTEGRATION" : {
+						"PART1" : "You can integrate your organization with",
+						"PART2" : "to have all your team be on the same page and keep your work synchronized"
+					},
+					"REMOVE" : {
+						"PART1": "You have an active integration with your",
+						"PART2": "organization",
+						"REMOVEBTN" : "Remove"
+					}
+				},
+				"JIRA" : {
+					"INTEGRATE" : "Integrate with Jira",
+					"INTEGRATION" : {
+						"PART1" : "You can integrate",
+						"PART2" : "with your organization"
+					},
+					"REMOVE" : {
+						"PART1" : "You have an active integration with your",
+						"PART2" : "organization",
+						"REMOVEBTN": "Remove"
+					}
+				},
+				"GITHUB" : {
+					"INTEGRATE" : "Integrate with GitHub",
+					"INTEGRATION" : {
+						"PART1" : "You can integrate",
+						"PART2" : "with your organization"
+					},
+					"REMOVE" : {
+						"PART1" : "You have an active integration with your",
+						"PART2" : "organization",
+						"REMOVEBTN": "Remove"
+					}
+				}
+			},
+			"TOASTS" : {
+				"REMOVE_USER" : "User successfully deleted from organization",
+				"ADD_USER" : "User successfully added to organization",
+				"SAVE_USER" : "Organization successfully update",
+				"PAID" : "Successful payment",
+				"DOWNLOAD" : "Downloading receipt",
+				"UPDATE" : "Dictionary record has been updated"
+			}
+		}
+	},
+	"PLATFORM": {
+		"CREATE": {
+			"TITLE": "Create new platform",
+			"NAME": "Name",
+			"DESC": "Description",
+			"SUBMIT": "Create new platform",
+			"TOASTS": {
+				"CREATE_SUCCESS": "Platform has been created successfully"
+			}
+		},
+		"TRIAL": {
+			"TITLE": "Create trial platform",
+			"NAME": "Name",
+			"REMOVE": "Remove",
+			"SUBMIT": "Create new platform",
+			"TOASTS": {
+				"ERROR": {
+					"PATTERN": "Version should have only numbers and dot",
+					"LIMIT": "You are using the trial version of the platform (no more than 15 components). For more change plan to PRO"
+				},
+				"INFO": "This component added without autocomplete. Some automatic options are unavailable for him",
+				"SUCCESS": "Platform has been created successfully"
+			}
+		},
+		"VIEW": {
+			"TITLE": "Platform",
+			"PROJECTS": "Projects: ",
+			"ISSUES": "Issues: ",
+			"EMPTY": "There are no Issues yet",
+			"ISSUE_TITLE": "Issues",
+			"FILTER": {
+				"PROJECT": "Project",
+				"AUTHOR": "Author",
+				"COMPONENT": "Component",
+				"STATUS": "Status",
+				"RANK": "Rank",
+				"DATE": "Created before",
+				"SET": "Set version",
+				"OPTION": {
+					"ALL": "All"
+				},
+				"NO_ISSUES": "There are no issues with such criteria"
+			},
+			"RANK": "Rank: ",
+			"PROJECT": "Project: ",
+			"ADDED_BY": "Added by: ",
+			"SUMMARY": "Title: ",
+			"EDIT": "Edit",
+			"REMOVE": "Remove",
+			"ARCHIVE": "Move to archive"
+		}
+	},
+	"PROJECT": {
+		"CREATE": {
+			"TITLE": "Create new Project",
+			"NAME": "Name",
+			"LOGO_ABSENT": "No logo",
+			"LOGO_ATTACH": "Upload",
+			"COMPONENTS": "Components management",
+			"COMPONENT_TAB_REPORT": "Import components from report file",
+			"COMPONENT_TAB_GITHUB": "Import components from github",
+			"TRIAL_MESSAGE": "Trial user has limited tracked components (15). To use all features upgrade your account",
+			"COMPONENTS_ABSENT": "You haven't added any components yet",
+			"TABLE": {
+				"NAME": "Name",
+				"VERSION": "Version",
+				"DELETE": "Delete"
+			},
+			"SETS": {
+				"TITLE": "Attach report with components",
+				"PACK": "Service Pack",
+				"ADD": "Add single component"
+			},
+			"COMPONENTS_NEW": "Add new component",
+			"VERSION": "Version",
+			"PATTERN": "Version should have only numbers and dot",
+			"ADD": "Add",
+			"OR_ATTACH_REPORT": "or attach a report with components",
+			"ATTACH_REPORT_ACTION": "Attach report",
+			"INSTRUCTIONS": "Instructions",
+			"SOURCE": "Source",
+			"OS": "Select your OS",
+			"OS_NAME": "OS Name (lowercase without spaces)",
+			"OS_VERSION": "Version",
+			"SUBMIT": "Create new project",
+			"OR": " or ",
+			"BACK": "Back",
+			"GITHUB": {
+				"IMPORT": "Import project from GitHub",
+				"START": "Start import",
+				"SELECT": "Select repository",
+				"SELECT_BRANCH": "Select current branch",
+				"BRANCHES_LIST_TITLE": "Your repository avaible  branches",
+				"LIST_TITLE": "Your repositories",
+				"PRIVATE": "Private",
+				"PUBLIC": "Public",
+				"NO_REPO": "You have no repositories",
+				"NO_REPO_ACTION": "To create project use creating report manually",
+				"BRANCH": "Default branch",
+				"MODAL": {
+					"TITLE": "Create project",
+					"OOPS": "Oops!",
+					"SEEMS": "Seems you haven't authorize with GitHub yet.",
+					"YOU_CAN": "You can do it at",
+					"PROFILE": "integration menu",
+					"OR": "or",
+					"CREATE": "create new project with report",
+					"OWN": "made on your own"
+				}
+			},
+			"TOASTS": {
+				"SUCCESS": {
+					"LOGO_CREATE": "Project's logo successfully Uploaded. Click 'CREATE PROJECT' button to apply changes",
+					"LOGO_UPDATE": "Project's logo successfully Uploaded. Click 'SAVE' button to apply changes",
+					"PROJECT": "Project has been created successfully",
+					"SET": "Set has been created successfully"
+				},
+				"ERROR": {
+					"ATTACH" : "You must choose Source option before attach report",
+					"COMPONENT_EMPTY": "Field 'Component' shouldn't be empty",
+					"VERSION_EMPTY": "Field 'Version' shouldn't be empty",
+					"COMPONENT_EXISTS": "You already added this component",
+					"NAME_EMPTY": "Specify project name",
+					"PROJECT_EMPTY": "Project must have at least 1 added component",
+					"COMPONENT_INV": "Invalid components added",
+					"SET_EMPTY": "Set must have at least 1 added component"
+				},
+				"INFO": "Components loaded successfully. Check it and click 'Create new set' button"
+			},
+			"MANUAL": {
+				"TITLE": "Instructions",
+				"HEADER": "To attach report with components for your project you can create one with following commands instead manually adding one by one. Open your terminal window (or command line) and insert command that are below. Depending on your operating system, select type and version in menu and attach report file.",
+				"SUBHEADER": "Also you can attach report file at the Project Settings.",
+				"LIST": "Command list",
+				"NPM": {
+					"INST_1": "Install global npm package",
+					"INST_2": "Type follow command from the root of your project folder",
+					"INST_3": "Attach your report file to create a project"
+				},
+				"WINDOWS": {
+					"INST_1": "Use that command to get all components from your Windows source. Then attach report file."
+				},
+				"MAC_OS": {
+					"INST_1" : "Use that command to get all components from your Mac OS source"
+				},
+				"DEBIAN": {
+					"INST_1" : "Use that command to get all components from your Debian-based source"
+				},
+				"RPM": {
+					"INST_1": "Use that command to get all components from your Red Hat/Fedora Core/CentOS source"
+				},
+				"FREE_BSD": {
+					"INST_1": "Use that command to get all components from BSD OS"
+				},
+				"HIDE": "Hide"
+			}
+		},
+		"VIEW" : {
+			"IS_TRIAL_PLATFORM" : "This is a trial platform",
+			"OWNER_ROLE" : "You are an owner of that platform",
+			"ADMIN_ROLE" : "You have write permissions to that platform",
+			"READ_ROLE" : "You have read permissions to that platform",
+			"OVERWIEW_TITLE" : "Project overview",
+			"NEW_ISSUE_BTN" : "New issue",
+			"SETTINGS_BTN" : "Settings",
+			"CREATE_ISSUE" : "Create issue",
+			"VULNERABLE" : "Vulnerable components",
+			"COMPONENT" : "Component",
+			"OPEN_ISSUES" : "Open Issues",
+			"SET" : {
+				"TITLE" : "Components sets",
+				"VERSION" : "Version",
+				"CREATED" : "Created",
+				"COMPONENTS" : "Components",
+				"SWITCH" : "switch",
+				"UPLOAD" : "upload",
+				"CURRENT": "current"
+			},
+			"VERSION": "Version",
+			"COMPONENTS": "Components",
+			"PENDING": "Issues: Pending...",
+			"STATUS_PENDING" : "Status : Pending...",
+			"ISSUES": "Issues:",
+			"PROGRESS": "Progress:",
+			"COMPLETE_FULL" : "Complete {{proceed}} from {{length}} components",
+			"NESTED": {
+				"TITLE" : "Nested projects",
+				"EMPTY" : "No nested projects",
+				"NAME" : "Name",
+				"CREATED" : "Created",
+				"ISSUES" : "Issues",
+				"COMPONENTS" : "Components"
+			},
+			"CREATE": "Create new project",
+			"ISSUES_ABSENT": "There are no issues yet",
+			"TOASTS": {
+				"REMOVE": "Issue removed successfully"
+			},
+			"REMOVE_DIALOG" : {
+				"TITLE" : "Are you sure to remove this issue?",
+				"REMOVE" : "Remove"
+			},
+			"SCORE" : "Vulnerability Score",
+			"CREATED" : "Created",
+			"MODIFIED" : "Modified",
+			"BUTTONS" : {
+				"CREATE" : "create"
+			},
+			"TABLE" : {
+				"RANK" : "Rank",
+				"TITLE" : "Title",
+				"COMPONENT" : "Component",
+				"DESC" : "Description",
+				"CREATED" : "Created",
+				"STATUS" : "Status",
+				"ASSIGNED" : "Assigned",
+				"ACTIONS" : "Actions"
+			},
+			"ASSIGNED" : {
+				"NOT" : "Not assigned",
+				"USERS" : "and {{more}} more {{more === 1 ? 'user' : 'users'}}"
+			}
+		},
+		"EDIT": {
+			"TITLE": "Main information",
+			"UPGRADE": "upgrade to pro",
+			"NAME": "Project name:",
+			"SAVE": "Save",
+			"STACK_VERSION": "Stack components version",
+			"NEW_SET": "Create new set",
+			"BACK": "Back to current",
+			"ACCESS": "You haven't access token yet.",
+			"TOKEN": "Token",
+			"COPY": "Copy to clipboard",
+			"SET": {
+				"HEADER": "Specify set of component's version",
+				"VERSION": "Set version",
+				"SUBMIT": "Submit",
+				"EXAMPLE": "Example"
+			},
+			"CHANGE_SET": {
+				"TITLE" : "Are you sure to change the version of components set ?",
+				"CONTENT" : "All your recent changes will be lost",
+				"OK" : "Change set",
+				"CANCEL" : "Cancel"
+			},
+			"TOASTS": {
+				"UPDATED": "Project has been updated successfully"
+			}
+		}
+	},
+	"ISSUES" : {
+		"VIEW" : {
+			"COMMENTS" : "Comments",
+			"NEW" : "New comment",
+			"TOPIC" : "Create forum topic",
+			"ABOUT" : "About",
+			"AUTHOR": "Author",
+			"STATUS" : "Status",
+			"STATUS_VALUE" : "{{ status }}",
+			"CREATED" : "Created",
+			"CVSS" : {
+				"TITLE" : "CVSS Score",
+				"NOTE" : "CVSS - Common Vulnerability Scoring System"
+			},
+			"DESCRIPTION" : "Vulnerability description",
+			"SUMMARY" : "Summary",
+			"REFERENCES" : "References",
+			"MORE" : "show more...",
+			"LESS" : "show less",
+			"CONFIGURATIONS" : "Vulnerable Configurations",
+			"BASE" : "Base",
+			"TIME" : "(as of {{ stamp | date:'longDate' }})",
+			"CAPEC" : {
+				"TITLE" : "CAPEC",
+				"NOTE" : "CAPEC - Common Attack Pattern Enumeration and Classification"
+			},
+			"PREREQUISITES" : "Prerequisites",
+			"SOLUTION" : "Solution",
+			"ACCESS" : "Access",
+			"VECTOR" : "Vector",
+			"COMPLEXITY" : "Complexity",
+			"AUTHENTICATION" : "Authentication",
+			"IMPACT" : "Impact",
+			"CONFIDENTIALITY" : "Confidentiality",
+			"INTEGRITY" : "Integrity",
+			"AVAILABILITY" : "Availability",
+			"NOTE_TIME" : "{{ time | date:'MM/dd/yyyy'}}",
+			"SAVE" : "Save",
+			"ATTACH" : "Attach",
+			"ADD": "Add comment",
+			"REMOVE": "Remove",
+			"EDIT" : "Edit",
+			"ASSIGNED" : "Assigned to:",
+			"ASSIGN" : "Assign",
+			"NOT_ASSIGNED" : "Assigned: None",
+			"MAX_USERS" : "You can assign {{users}} more users",
+			"USER_ASSIGNED" : "{{author}} assigned to {{firstname}} {{lastname}}.",
+			"USER_REMOVED" : "{{author}} removed {{firstname}} {{lastname}} from issue.",
+			"USERS_ASSIGNED" : "{{author}} assigned to {{users}} users.",
+			"USERS_REMOVED" : "{{author}} removed {{users}} users from issue.",
+			"UPDATE_ASSIGN" : "{{author}} updated assignment.",
+			"STATUS_CHANGED" : "Status changed from {{old}} to {{new}}",
+			"STATUS_WITH_COMMENT" : "Status changed from {{old}} to {{new}} with comment:\n {{comment}}",
+			"UPDATED" : "Updated by {{username}} {{date}}",
+			"NOTIFICATION" : {
+				"SAVE_NOTE" : "{{username}} added new comment into {{issue}} issue.\n {{comment}}",
+				"SAVE_STATUS" : "{{username}} changed status of {{issue}} issue to ''{{status}}''"
+			},
+			"TOASTS" : {
+				"SAVE_STATUS" : "Status has been updated successfully",
+				"DELETE_NOTE" : "Note successfully deleted",
+				"ADD_NOTE" : "Comment successfully added",
+				"FIELD" : "Field 'New Comment' shouldn't be empty",
+				"FILE" : "Filesize should be not more than 1MB",
+				"RESAVE" : "You can't resave comment with empty description",
+				"ASSIGN_MAX" : "You can't assing more that 10 users",
+				"REASSIGN" : "Reassigned"
+			},
+			"TEMPLATE" : {
+				"TITLE" : "Please add comment why it is not applicable",
+				"COMMENT" : "Comment",
+				"CANCEL" : "Cancel",
+				"CHANGE" : "Change"
+			}
+		},
+		"EDIT" : {
+			"BLOCK" : "Edit issue",
+			"TITLE" : "Issue title",
+			"DESCRIPTION" : "Issue description",
+			"COMPONENT" : "Vulnerable component",
+			"CVSS" : "Issue CVSS Score",
+			"STATUS" : "Status",
+			"TARGET" : "Target date for eliminating the issue (MM.DD.YYYY): ",
+			"INVALID_DATE" : "The entered value is not a date",
+			"UPDATE" : "Update",
+			"STATUS_CHANGED" : "Status changed from {{old}} to {{new}}",
+			"TOASTS" : {
+				"UPDATE" : "Updated successfully"
+			}
+		},
+		"CREATE" : {
+			"BLOCK" : "Create Issue",
+			"TITLE" : "Issue title (required)",
+			"DESCRIPTION" : "Issue description (required)",
+			"SET" : "Set of components",
+			"COMPONENT" : "Vulnerable component (required)",
+			"COMPONENTS" : "Vulnerable components:",
+			"MAKE_NEW" : "or make a new Vulnerability",
+			"EMPTY" : "No vulnerabilities found. Create new one or type other keywords",
+			"SEARCH" : "Search Vulnerabilities",
+			"CREATE" : "Create Issue",
+			"KEYWORDS" : "Keywords (required)",
+			"VULNERABILITY" : {
+				"TITLE" : "Vulnerability title (required)",
+				"DESCRIPTION" : "Vulnerability description (required)",
+				"RANK" : "Rank (required)",
+				"CWE" : "CWE",
+				"ID" : "CWE ID",
+				"CVSS" : "CVSS (required)",
+				"CAPEC" : "CAPEC",
+				"CONFIGURATION" : "Vulnerable Configuration",
+				"CVE" : "CVE references",
+				"ACCESS" : "Access",
+				"VECTOR" : "Vector",
+				"COMPLEXITY" : "Complexity",
+				"AUTHENTICATION" : "Authentication",
+				"IMPACT" : "Impact",
+				"CONFIDENTIALITY" : "Confidentiality",
+				"INTEGRITY" : "Integrity",
+				"AVAILABILITY" : "Availability"
+			},
+			"TOASTS" : {
+				"SUCCESS" : "Issue has been created successfully"
+			}
+		}
+	},
+	"BLOCKED": {
+		"TITLE": "Blocked Users",
+		"USERS_ABSENT": "There are no blocked users",
+		"EMAIL": "Email",
+		"FIRST_NAME": "First name",
+		"LAST_NAME": "Last name",
+		"SUPER": "Super",
+		"TILL": "Blocked till",
+		"UNLOCK": "Unlock"
+	},
+	"MFA": {
+		"BLOCK": "MFA",
+		"TITLE": "Multi-factor Authentication",
+		"USERS_ABSENT": "There are no users with enabled MFA",
+		"USERNAME": "Username",
+		"NAME": "Name",
+		"ACTION": "Action",
+		"DISABLE": "Disable"
+	},
+	"INVITATIONS": {
+		"BLOCK" : "Invitations",
+		"TITLE": "Invitation management",
+		"CODE": "Invitation code",
+		"GENERATE": "Generate random code",
+		"ADD": "Add invitation",
+		"HEADER": "Invitations:",
+		"REQUESTED_BY": "Requested By:",
+		"STATUS": "Status",
+		"STATUSES": {
+			"ALL": "All",
+			"ACTIVATED": "Activated",
+			"NOT_ACTIVATED": "Not activated"
+		},
+		"TABLE": {
+			"CODE": "Code",
+			"REQUESTED_BY": "Requested By",
+			"SENT_TO": "Sent to",
+			"ACTIVATED_BY": "Activated by",
+			"DATE": "Activated date",
+			"NOTES": "Notes",
+			"ACTIONS": "Actions"
+		},
+		"TEMPLATE" : {
+			"TITLE" : "Delete invitation",
+			"CONTENT" : "Are you sure you want to delete invitation?",
+			"OK" : "Delete",
+			"CANCEL" : "No"
+		},
+		"ADD_NOTE": "Add note",
+		"DELETE": "Delete",
+		"SEND": "Send Email",
+		"NOTE": {
+			"HEADER": "Add your note",
+			"NOTE": "Note",
+			"ADD": "Add"
+		},
+		"EMAIL": {
+			"HEADER": "Send by email",
+			"EMAIL": "Email",
+			"PATTERN": "Please type a valid email address",
+			"SEND": "Send"
+		},
+		"TOASTS": {
+			"SEND": "Invitation send to {{email}}",
+			"SUCCESS": "New invitation has been added",
+			"DELETE": "Invitation has been deleted"
+		}
+	},
+	"COUPONS": {
+		"BLOCK" : "Coupons",
+		"TITLE": "Coupon management",
+		"COUPONS_ABSENT": "No active coupons yet. Create the first.",
+		"DURATION": "Duration in month",
+		"ID": "Coupon Id",
+		"MIN": "Coupon ID should have at least 4 characters",
+		"MAX": "Coupon ID should have no more than 24 characters",
+		"GENERATE": "Generate random ID",
+		"ADD": "Add Coupon",
+		"TABLE": {
+			"ID": "ID",
+			"PERCENT": "Percent off",
+			"DURATION": "Duration in month",
+			"VALID": "Valid",
+			"ACTIONS": "Actions",
+			"USED" : "{{value ? 'Unused' : 'Used'}}"
+		},
+		"DELETE": "Delete",
+		"TOASTS": {
+			"SUCCESS": "Coupon created successfully",
+			"DELETE": "Coupon deleted successfully"
+		}
+	},
+	"DICTIONARY" : {
+		"TITLE": "Dictionary",
+		"CLIENT" : {
+			"TITLE" : "Client's dictionary",
+			"SEARCH" : "Search",
+			"EMPTY" : "There are no dictionary yet.",
+			"COMPONENT" : "Name of component",
+			"ALTERNATIVE" : "Alternative names",
+			"ORGANIZATION" : "Organizaion name",
+			"EDIT" : "Edit"
+		},
+		"PENDING" : {
+			"TITLE" : "Pending ({{value}})",
+			"SEARCH" : "Search",
+			"EMPTY" : "There are no dictionary yet.",
+			"COMPONENT" : "Name of component",
+			"ALTERNATIVE" : "Alternative names",
+			"ORGANIZATION" : "Organizaion name",
+			"APPROVE" : "Approve"
+		},
+		"PUBLIC" : {
+			"TITLE" : "Public Dictionary",
+			"SEARCH" : "Search",
+			"EMPTY" : "There are no dictionary yet.",
+			"COMPONENT" : "Name of component",
+			"ALTERNATIVE" : "Alternative names",
+			"EDIT" : "Edit"
+		},
+		"TOASTS" : {
+			"SUCCESS" : "Dictionary record has been updated"
+		}
+	},
+	"USER" : {
+		"EDIT" : {
+			"TITLE" : "Edit profile",
+			"UNLIMITED" : "You have unlimited access.",
+			"LIMITED" : "You have trial access. Upgrade to PRO to remove limits.",
+			"UPGRADE" : "Upgrade to PRO",
+			"MAIN" : "Main information",
+			"UPLOAD" : "Upload new",
+			"EMAIL" : "Email:",
+			"FIRST" : "First name:",
+			"LAST" : "Last name:",
+			"LANGUAGE" : "Language",
+			"CHOOSE_LANGUAGE": "Choose language",
+			"SAVE" : "save",
+			"CHANGE" : "Change password",
+			"CURRENT" : "Current password:",
+			"NEW" : "New password:",
+			"PATTERN" : "Password length should be at least 8 charachters and should have at least one character in upper and lower case, one digit and one special character",
+			"CONFIRM" : "Confirm new password: {{match}}",
+			"DIFFERENT" : "Password and Confirm Password should match",
+			"CHANGE_BUTTON" : "Change password",
+			"AUTHENTICATION" : {
+				"TITLE": "Authentication",
+				"LABEL": "Auth Token",
+				"COPY": "Copy to clipboard",
+				"HELP": "Use that Token for integrations and SurePatch CLI Application"
+			},
+			"STATUS_AUTH" : "Two-factor authentication ({{status}})",
+			"GENERATE" : "Generate Code",
+			"NOTE" : "Generating a new code will overwrite all previous codes",
+			"NOTIFICATIONS" : {
+				"TITLE": "Notifications",
+				"COMMON": "Common",
+				"DETAILS": "Detailed",
+				"UPDATED": "Notifications about new vulnerabilities",
+				"DAILY": "Daily notifications",
+				"WEEKLY": "Weekly notifications about updated vulnerabilities"
+			},
+			"TOASTS" : {
+				"SUCCESS" : "Profile successfully updated",
+				"LOGO" : "Logo successfully updated",
+				"MFA_ENABLED" : "MFA enabled",
+				"MFA_DISABLED" : "MFA disabled",
+				"GITHUB": "GitHub authentication was succeed"
+			}
+		},
+		"RESET" : {
+			"TITLE" : "Set Password",
+			"PASSWORD" : "Password:",
+			"CONFIRM" : "Confirm password",
+			"PATTERN" : "Password length should be at least 8 charachters and should have at least one character in upper and lower case, one digit and one special character",
+			"DIFFERENT" : "Password and Confirm Password should match",
+			"BUTTON" : "Confirm",
+			"TOASTS" : {
+				"SUCCESS" : "Password was changed"
+			}
+		},
+		"INTEGRATION": {
+			"TITLE": "Integrations",
+			"DESCRIPTION": "Your personal Authorization Token",
+			"CONTINUOUSLY": "Continuously integrations",
+			"SEE": "See docs",
+			"VERSION": "Version control",
+			"INSTANT": "Instant notifications"
+		}
+	},
+	"SUPERS" : {
+		"TITLE" : "Super Users management",
+		"EMAIL" : "Email",
+		"FIRST" : "First name",
+		"LAST" : "Last name",
+		"ADD" : "Add User",
+		"ACTIONS" : "Actions",
+		"DELETE_BUTTON" : "Delete",
+		"DELETE" : {
+			"TITLE" : "Would you like to delete {{username}} ?",
+			"OK" : "Deleted",
+			"CANCEL" : "Cancel"
+		},
+		"TOASTS" : {
+			"SUCCESS_DELETE" : "Super User successfully removed",
+			"SUCCESS_ADD" : "Super User successfully added"
+		}
+	},
+	"FORUM" : {
+		"CATEGORY" : {
+			"CREATE": {
+				"TITLE": "Create new category",
+				"NAME": "Category name",
+				"DESC": "Category description",
+				"CREATE": "Create",
+				"TOASTS": {
+					"SUCCESS": "Category created successfully"
+				}
+			},
+			"EDIT" : {
+				"TITLE" : "Edit category",
+				"NAME" : "Category name",
+				"DESCRIPTION" : "Category description",
+				"SAVE" : "Save",
+				"SUCCESS" : "Category updated successfully"
+			},
+			"VIEW": {
+				"CREATE_TOP": "Create topic",
+				"AUTHOR": "Author",
+				"UPDATED": "Updated",
+				"POSTS": "posts",
+				"TOASTS": {
+					"SUBS": "Subscribed",
+					"UNSBS": "Unsubscribed"
+				}
+			}
+		},
+		"VIEW" : {
+			"TITLE": "SurePatch forum",
+			"CREATE_CAT": "Create new Category",
+			"TOPICS": "topics"
+		},
+		"TOPIC": {
+			"CREATE": {
+				"TITLE": "Create a new topic",
+				"DESCRIPTION": "Topic title",
+				"HEADER": "Topic header",
+				"REQUIRED": "Field is required",
+				"VULNERABILITY": "Vulnerability ID (title) (optional)",
+				"CREATE": "Create"
+			},
+			"VIEW": {
+				"DESCRIPTION": "Description",
+				"OVERVIEW": "Vulnerability overview",
+				"SUBSCRIBE": "Subscribed"
+			}
+		}
+	},
+	"RANK" : {
+		"SINGLE" : {
+			"MALE" : {
+				"HIGH" : "High",
+				"MEDIUM" : "Medium",
+				"LOW" : "Low"
+			},
+			"FEMALE" : {
+				"HIGH" : "High",
+				"MEDIUM" : "Medium",
+				"LOW" : "Low"
+			}
+		},
+		"PLURAL" : {
+			"HIGH" : "high",
+			"MEDIUM" : "medium",
+			"LOW" : "low",
+			"NONE": "none"
+		},
+		"PENDING" : "Pending"
+	},
+	"COMPONENT": {
+		"OVERVIEW" : {
+			"COMPONENT": "Component",
+			"SEARCH": "Search",
+			"VULNERABILITIES": "Open vulnerabilities",
+			"RANK": "Rank",
+			"TITLE": "Title",
+			"DESCRIPTION": "Description",
+			"NO_SEARCH": "No search results. Try changing your search terms."
+		},
+		"VULNERABILITIES": {
+			"TITLE": "Vulnerability",
+			"PREREQUISITES": "Prerequisites:",
+			"SOLUTIONS": "Solutions:",
+			"SUMMARY": "Summary:",
+			"ISSUE": {
+				"HEADER": "Open issues",
+				"RANK": "Rank",
+				"TITLE": "Title",
+				"NAME": "Project name",
+				"ASSIGN": "Assign",
+				"COMMENTS": "Comments",
+				"DATE": "Date",
+				"NONE": "None"
+			}
+		}
+	},
+	"LOGGING": {
+		"LOGS": "logs",
+		"DOWNLOAD": "Download",
+		"TITLE": "Logs",
+		"SEARCH": "Search"
+	},
+	"PROJECTS": {
+		"CREATE":{
+			"TITLE": "Create new project",
+			"INTEGRATION": "Continuously integrations",
+			"INTEGRATE": "Integrate SurePatch into your deploy process",
+			"RECIEVE": "Receive notifications about new vulnerabilities",
+			"BROWSE": "Browse integrations",
+			"APPLICATION": "Application",
+			"DOWNLOAD_COMMAND": "Download Command Line Interface application",
+			"COPY": "Copy it in your app work directory",
+			"VIEW": "View documentation",
+			"DOWNLOAD": "Download",
+			"CODE": "Source code protection",
+			"CONNECT": "Connect your version control with SurePatch",
+			"ABOUT": "Recieve notifications about new vulnerabilities",
+			"PULL": "Create pull requests with patches",
+			"SYSTEM": "System report manual uploading",
+			"DESCRIPTION": "To create your system report in proper format, please follow the instructions bellow. After you will have the report file, you can upload it to the system",
+			"SELECT": " Select platform, on which you want to create a project",
+			"PLATFORM": "Select platform",
+			"OR": "or",
+			"NEW_PLATFORM": "Create new platform",
+			"PLATFORM_NAME": "Platform name",
+			"REQUIRED": "Field is required",
+			"FIELD": "Field should contain not more than 40 characters",
+			"CONTAIN": "Field coluld contain only lowercase characters, digits, dashes, and must start with a character",
+			"PROJECT_NAME": "Specify project name",
+			"SELECT_REPORT": " Select your report source",
+			"PACK": "Service Pack",
+			"ADD": " Or add components manually",
+			"LIST": "List of components"
+		}
+	}
+}

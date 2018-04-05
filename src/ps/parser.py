@@ -4,8 +4,8 @@ from datetime import datetime
 
 filename = 'modified.json'
 
-with open(filename, 'r') as file:
-    j = json.load(file)
+# with open(filename, 'r') as file:
+#     j = json.load(file)
 
 
 class Item(object):
@@ -160,6 +160,6 @@ class Item(object):
         self.publishedDate = data.get("publishedDate", datetime.utcnow())
         self.lastModifiedDate = data.get("lastModifiedDate", datetime.utcnow())
 
-for i in range(0, 30):
-    i = Item(j["CVE_Items"][i])
-    print(i.cvssv3)
+# for i in range(0, 30):
+#     i = Item(j["CVE_Items"][i])
+#     print(i.cvssv3)
